@@ -39,7 +39,7 @@ class Sensei(MockableTestResult):
             MockableTestResult.addSuccess(self, test)
             self.stream.writeln( \
                 "  {0}{1}{2} has expanded your awareness.{3}{4}" \
-                .format(Fore.GREEN, Style.BRIGHT, test._testMethodName, \
+                .format(Fore.GREEN, Style.NORMAL, test._testMethodName, \
                 Fore.RESET, Style.NORMAL))              
             self.pass_count += 1
 
@@ -111,7 +111,7 @@ class Sensei(MockableTestResult):
         self.stream.writeln("")
         self.stream.writeln("{0}{1}Please meditate on the following code:" \
             .format(Fore.RESET, Style.NORMAL))
-        self.stream.writeln("{0}{1}{2}{3}{4}".format(Fore.YELLOW, Style.BRIGHT, \
+        self.stream.writeln("{0}{1}{2}{3}{4}".format(Fore.YELLOW, Style.NORMAL, \
             self.scrapeInterestingStackDump(err), Fore.RESET, Style.NORMAL))
 
     def scrapeAssertionError(self, err):
